@@ -52,7 +52,7 @@ COPY --from=base /usr/share/zoneinfo /usr/share/zoneinfo
 COPY --from=base /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 
 # Argo Workflow CLI
-COPY assets/argo-linux-amd64 /usr/local/bin/argo
+COPY assets/argo-linux-ppc64le /usr/local/bin/argo
 RUN chmod +x /usr/local/bin/argo
 RUN argo version || true
 
